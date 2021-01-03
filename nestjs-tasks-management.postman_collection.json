@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "06dc4588-c0aa-471a-abb4-16346c6f43d8",
+		"_postman_id": "8db06fea-cc15-4e4f-b34e-a09e72d6342f",
 		"name": "nestjs-tasks-management",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -11,14 +11,14 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "localhost:3000/tasks/5",
+					"raw": "localhost:3000/tasks/2",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"tasks",
-						"5"
+						"2"
 					]
 				}
 			},
@@ -27,6 +27,16 @@
 		{
 			"name": "Get All Tasks",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvcmdlMSIsImlhdCI6MTYwOTE5OTEzOSwiZXhwIjoxNjA5MjAyNzM5fQ.PxzFLmE2q0Mqq6ATrhjSM-Vaf7NlUvH8K-uLMQGuXnE",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -55,6 +65,16 @@
 		{
 			"name": "Create New Task",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImpvcmdlMSIsImlhdCI6MTYwOTE5OTEzOSwiZXhwIjoxNjA5MjAyNzM5fQ.PxzFLmE2q0Mqq6ATrhjSM-Vaf7NlUvH8K-uLMQGuXnE",
+							"type": "string"
+						}
+					]
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
@@ -80,6 +100,62 @@
 			"response": []
 		},
 		{
+			"name": "SignUp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jorge1\",\n    \"password\": \"12345678Aa@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/signup",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SignIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"jorge1\",\n    \"password\": \"12345678Aa@\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/auth/signin",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"auth",
+						"signin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Update Task By Id",
 			"request": {
 				"method": "PATCH",
@@ -94,14 +170,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/tasks/5/status",
+					"raw": "localhost:3000/tasks/2/status",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"tasks",
-						"5",
+						"2",
 						"status"
 					]
 				}
@@ -115,7 +191,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"title\": \"some title 2\",\n    \"description\": \"some description 2\"\n}",
+					"raw": "",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -123,14 +199,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/tasks/4",
+					"raw": "localhost:3000/tasks/1",
 					"host": [
 						"localhost"
 					],
 					"port": "3000",
 					"path": [
 						"tasks",
-						"4"
+						"1"
 					]
 				}
 			},
