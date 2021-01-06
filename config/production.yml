@@ -1,2 +1,5 @@
+server:
+  origin: https://nestjs-task-management-frontend-12345.s3.eu-west-2.amazonaws.com
+
 db:
   synchronize: false
